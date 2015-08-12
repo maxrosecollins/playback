@@ -1,0 +1,22 @@
+{
+	"build_systems":
+	[
+		{
+			"name" : "AINT304Build",
+			"cmd" : [ "${project_path}/src/build.sh" ],
+			"working_dir": "${project_path}",
+			"windows":
+			{
+				"cmd": ["${project_path}\\src\\build.bat"]
+			}
+		}
+	],
+
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+	
+}

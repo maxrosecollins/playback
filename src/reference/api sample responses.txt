@@ -1,0 +1,492 @@
+
+/* Example Data API Responses */
+
+/* SoundCloud */
+[
+    {
+        "kind": "track",
+        "id": 37609107,
+        "created_at": "2012/02/23 20:29:19 +0000",
+        "user_id": 105165,
+        "duration": 229493,
+        "commentable": true,
+        "state": "finished",
+        "original_content_size": 9174261,
+        "sharing": "public",
+        "tag_list": "Bondax Just Us UK",
+        "permalink": "just-us",
+        "streamable": true,
+        "embeddable_by": "all",
+        "downloadable": false,
+        "purchase_url": null,
+        "label_id": null,
+        "purchase_title": null,
+        "genre": "",
+        "title": "Just Us",
+        "description": "Free dl: http://soundcloud.com/platform/bondax-just-us",
+        "label_name": "",
+        "release": "",
+        "track_type": "original",
+        "key_signature": "",
+        "isrc": "",
+        "video_url": null,
+        "bpm": null,
+        "release_year": null,
+        "release_month": null,
+        "release_day": null,
+        "original_format": "mp3",
+        "license": "all-rights-reserved",
+        "uri": "http://api.soundcloud.com/tracks/37609107",
+        "user": {
+            "id": 105165,
+            "kind": "user",
+            "permalink": "bondax",
+            "username": "Bondax",
+            "uri": "http://api.soundcloud.com/users/105165",
+            "permalink_url": "http://soundcloud.com/bondax",
+            "avatar_url": "http://i1.sndcdn.com/avatars-000010594803-qaj7po-large.jpg?f6d22d0"
+        },
+        "permalink_url": "http://soundcloud.com/bondax/just-us",
+        "artwork_url": "http://i1.sndcdn.com/artworks-000019067772-t8cm75-large.jpg?f6d22d0",
+        "waveform_url": "http://w1.sndcdn.com/wg66UcYkxH7H_m.png",
+        "stream_url": "http://api.soundcloud.com/tracks/37609107/stream",
+        "playback_count": 47857,
+        "download_count": 1000,
+        "favoritings_count": 1253,
+        "comment_count": 113,
+        "attachments_uri": "http://api.soundcloud.com/tracks/37609107/attachments"
+    }
+]
+
+
+/* YouTube */
+
+	{
+    "version": "1.0",
+    "encoding": "UTF-8",
+    "feed": {
+        "xmlns": "http://www.w3.org/2005/Atom",
+        "xmlns$media": "http://search.yahoo.com/mrss/",
+        "xmlns$openSearch": "http://a9.com/-/spec/opensearch/1.1/",
+        "xmlns$gd": "http://schemas.google.com/g/2005",
+        "xmlns$yt": "http://gdata.youtube.com/schemas/2007",
+        "gd$etag": "W/\"Ak4FQ3g5cSp7I2A9WhNSFko.\"",
+        "id": {
+            "$t": "tag:youtube.com,2008:videos"
+        },
+        "updated": {
+            "$t": "2012-10-31T10:21:52.629Z"
+        },
+        "category": [
+            {
+                "scheme": "http://schemas.google.com/g/2005#kind",
+                "term": "http://gdata.youtube.com/schemas/2007#video"
+            }
+        ],
+        "title": {
+            "$t": "YouTube Videos matching query: bondax"
+        },
+        "logo": {
+            "$t": "http://www.youtube.com/img/pic_youtubelogo_123x63.gif"
+        },
+        "link": [
+            {
+                "rel": "alternate",
+                "type": "text/html",
+                "href": "http://www.youtube.com"
+            },
+            {
+                "rel": "http://schemas.google.com/g/2005#feed",
+                "type": "application/atom+xml",
+                "href": "http://gdata.youtube.com/feeds/api/videos?v=2"
+            },
+            {
+                "rel": "http://schemas.google.com/g/2005#batch",
+                "type": "application/atom+xml",
+                "href": "http://gdata.youtube.com/feeds/api/videos/batch?v=2"
+            },
+            {
+                "rel": "self",
+                "type": "application/atom+xml",
+                "href": "http://gdata.youtube.com/feeds/api/videos?alt=json&q=bondax&start-index=1&max-results=1&v=2"
+            },
+            {
+                "rel": "service",
+                "type": "application/atomsvc+xml",
+                "href": "http://gdata.youtube.com/feeds/api/videos?alt=atom-service&v=2"
+            },
+            {
+                "rel": "next",
+                "type": "application/atom+xml",
+                "href": "http://gdata.youtube.com/feeds/api/videos?alt=json&q=bondax&start-index=2&max-results=1&v=2"
+            }
+        ],
+        "author": [
+            {
+                "name": {
+                    "$t": "YouTube"
+                },
+                "uri": {
+                    "$t": "http://www.youtube.com/"
+                }
+            }
+        ],
+        "generator": {
+            "$t": "YouTube data API",
+            "version": "2.1",
+            "uri": "http://gdata.youtube.com"
+        },
+        "openSearch$totalResults": {
+            "$t": 490
+        },
+        "openSearch$startIndex": {
+            "$t": 1
+        },
+        "openSearch$itemsPerPage": {
+            "$t": 1
+        },
+        "entry": [
+            {
+                "gd$etag": "W/\"CUcNRH47eCp7I2A9WhNSFUs.\"",
+                "id": {
+                    "$t": "tag:youtube.com,2008:video:9uge7OCNsOI"
+                },
+                "published": {
+                    "$t": "2012-08-29T16:41:32.000Z"
+                },
+                "updated": {
+                    "$t": "2012-10-30T02:11:35.000Z"
+                },
+                "category": [
+                    {
+                        "scheme": "http://schemas.google.com/g/2005#kind",
+                        "term": "http://gdata.youtube.com/schemas/2007#video"
+                    },
+                    {
+                        "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat",
+                        "term": "Music",
+                        "label": "Music"
+                    }
+                ],
+                "title": {
+                    "$t": "Bondax - \"Baby I Got That\" (Official Video)"
+                },
+                "content": {
+                    "type": "application/x-shockwave-flash",
+                    "src": "http://www.youtube.com/v/9uge7OCNsOI?version=3&f=videos&app=youtube_gdata"
+                },
+                "link": [
+                    {
+                        "rel": "alternate",
+                        "type": "text/html",
+                        "href": "http://www.youtube.com/watch?v=9uge7OCNsOI&feature=youtube_gdata"
+                    },
+                    {
+                        "rel": "http://gdata.youtube.com/schemas/2007#video.responses",
+                        "type": "application/atom+xml",
+                        "href": "http://gdata.youtube.com/feeds/api/videos/9uge7OCNsOI/responses?v=2"
+                    },
+                    {
+                        "rel": "http://gdata.youtube.com/schemas/2007#video.related",
+                        "type": "application/atom+xml",
+                        "href": "http://gdata.youtube.com/feeds/api/videos/9uge7OCNsOI/related?v=2"
+                    },
+                    {
+                        "rel": "http://gdata.youtube.com/schemas/2007#mobile",
+                        "type": "text/html",
+                        "href": "http://m.youtube.com/details?v=9uge7OCNsOI"
+                    },
+                    {
+                        "rel": "http://gdata.youtube.com/schemas/2007#uploader",
+                        "type": "application/atom+xml",
+                        "href": "http://gdata.youtube.com/feeds/api/users/0iwHRFpv2_fpojZgQhElEQ?v=2"
+                    },
+                    {
+                        "rel": "self",
+                        "type": "application/atom+xml",
+                        "href": "http://gdata.youtube.com/feeds/api/videos/9uge7OCNsOI?v=2"
+                    }
+                ],
+                "author": [
+                    {
+                        "name": {
+                            "$t": "noisey"
+                        },
+                        "uri": {
+                            "$t": "http://gdata.youtube.com/feeds/api/users/noisey"
+                        },
+                        "yt$userId": {
+                            "$t": "0iwHRFpv2_fpojZgQhElEQ"
+                        }
+                    }
+                ],
+                "yt$accessControl": [
+                    {
+                        "action": "comment",
+                        "permission": "allowed"
+                    },
+                    {
+                        "action": "commentVote",
+                        "permission": "allowed"
+                    },
+                    {
+                        "action": "videoRespond",
+                        "permission": "moderated"
+                    },
+                    {
+                        "action": "rate",
+                        "permission": "allowed"
+                    },
+                    {
+                        "action": "embed",
+                        "permission": "allowed"
+                    },
+                    {
+                        "action": "list",
+                        "permission": "allowed"
+                    },
+                    {
+                        "action": "autoPlay",
+                        "permission": "allowed"
+                    },
+                    {
+                        "action": "syndicate",
+                        "permission": "allowed"
+                    }
+                ],
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "rel": "http://gdata.youtube.com/schemas/2007#comments",
+                        "href": "http://gdata.youtube.com/feeds/api/videos/9uge7OCNsOI/comments?v=2",
+                        "countHint": 110
+                    }
+                },
+                "yt$hd": {},
+                "media$group": {
+                    "media$category": [
+                        {
+                            "$t": "Music",
+                            "label": "Music",
+                            "scheme": "http://gdata.youtube.com/schemas/2007/categories.cat"
+                        }
+                    ],
+                    "media$content": [
+                        {
+                            "url": "http://www.youtube.com/v/9uge7OCNsOI?version=3&f=videos&app=youtube_gdata",
+                            "type": "application/x-shockwave-flash",
+                            "medium": "video",
+                            "isDefault": "true",
+                            "expression": "full",
+                            "duration": 244,
+                            "yt$format": 5
+                        },
+                        {
+                            "url": "rtsp://v5.cache6.c.youtube.com/CiILENy73wIaGQnisI3g7B7o9hMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp",
+                            "type": "video/3gpp",
+                            "medium": "video",
+                            "expression": "full",
+                            "duration": 244,
+                            "yt$format": 1
+                        },
+                        {
+                            "url": "rtsp://v5.cache6.c.youtube.com/CiILENy73wIaGQnisI3g7B7o9hMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp",
+                            "type": "video/3gpp",
+                            "medium": "video",
+                            "expression": "full",
+                            "duration": 244,
+                            "yt$format": 6
+                        }
+                    ],
+                    "media$credit": [
+                        {
+                            "$t": "noisey",
+                            "role": "uploader",
+                            "scheme": "urn:youtube",
+                            "yt$display": "noisey",
+                            "yt$type": "partner"
+                        }
+                    ],
+                    "media$description": {
+                        "$t": "You're going to need a cigarette or at least a towel after \"Baby I Got That\", from teenaged beat sculptors Bondax. Thanks! www.facebook.com ** Subscribe to Noisey on YouTube to stay updated on our daily releases: www.youtube.com Videos, daily editorial and more: www.noisey.com Like Noisey on Facebook fb.com Follow Noisey on Twitter: twitter.com Read our tumblr: noiseymusic.tumblr.com",
+                        "type": "plain"
+                    },
+                    "media$keywords": {},
+                    "media$license": {
+                        "$t": "youtube",
+                        "type": "text/html",
+                        "href": "http://www.youtube.com/t/terms"
+                    },
+                    "media$player": {
+                        "url": "http://www.youtube.com/watch?v=9uge7OCNsOI&feature=youtube_gdata_player"
+                    },
+                    "media$restriction": [
+                        {
+                            "$t": "DE",
+                            "type": "country",
+                            "relationship": "deny"
+                        }
+                    ],
+                    "media$thumbnail": [
+                        {
+                            "url": "http://i.ytimg.com/vi/9uge7OCNsOI/default.jpg",
+                            "height": 90,
+                            "width": 120,
+                            "time": "00:02:02",
+                            "yt$name": "default"
+                        },
+                        {
+                            "url": "http://i.ytimg.com/vi/9uge7OCNsOI/mqdefault.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "yt$name": "mqdefault"
+                        },
+                        {
+                            "url": "http://i.ytimg.com/vi/9uge7OCNsOI/hqdefault.jpg",
+                            "height": 360,
+                            "width": 480,
+                            "yt$name": "hqdefault"
+                        },
+                        {
+                            "url": "http://i.ytimg.com/vi/9uge7OCNsOI/1.jpg",
+                            "height": 90,
+                            "width": 120,
+                            "time": "00:01:01",
+                            "yt$name": "start"
+                        },
+                        {
+                            "url": "http://i.ytimg.com/vi/9uge7OCNsOI/2.jpg",
+                            "height": 90,
+                            "width": 120,
+                            "time": "00:02:02",
+                            "yt$name": "middle"
+                        },
+                        {
+                            "url": "http://i.ytimg.com/vi/9uge7OCNsOI/3.jpg",
+                            "height": 90,
+                            "width": 120,
+                            "time": "00:03:03",
+                            "yt$name": "end"
+                        }
+                    ],
+                    "media$title": {
+                        "$t": "Bondax - \"Baby I Got That\" (Official Video)",
+                        "type": "plain"
+                    },
+                    "yt$aspectRatio": {
+                        "$t": "widescreen"
+                    },
+                    "yt$duration": {
+                        "seconds": "244"
+                    },
+                    "yt$uploaded": {
+                        "$t": "2012-08-29T16:41:32.000Z"
+                    },
+                    "yt$uploaderId": {
+                        "$t": "UC0iwHRFpv2_fpojZgQhElEQ"
+                    },
+                    "yt$videoid": {
+                        "$t": "9uge7OCNsOI"
+                    }
+                },
+                "gd$rating": {
+                    "average": 4.867154,
+                    "max": 5,
+                    "min": 1,
+                    "numRaters": 1641,
+                    "rel": "http://schemas.google.com/g/2005#overall"
+                },
+                "yt$statistics": {
+                    "favoriteCount": "0",
+                    "viewCount": "130875"
+                },
+                "yt$rating": {
+                    "numDislikes": "54",
+                    "numLikes": "1587"
+                }
+            }
+        ]
+    }
+}
+
+
+/* Exfm */
+	{
+	    "status_text": "OK",
+	    "status_code": 200,
+	    "results": 1,
+	    "start": 0,
+	    "total": 712,
+	    "songs": [
+	        {
+	            "album": null,
+	            "similar_artists": [
+	                "ess\u00e1y",
+	                "disclosure",
+	                "123mrk",
+	                "xxyyxx",
+	                "karma kid",
+	                "kidnap kid",
+	                "owsey",
+	                "maribou state",
+	                "bwana",
+	                "young pharaohs",
+	                "last japan",
+	                "flume",
+	                "arapaima"
+	            ],
+	            "buy_link": "http://soundcloud.com/bondax/baby-i-got-that-1/s-x6vDI",
+	            "listened": false,
+	            "artist": "Bondax",
+	            "url": "http://api.soundcloud.com/tracks/55843921/stream?secret_token=s-x6vDI",
+	            "image": {
+	                "small": "http://i1.sndcdn.com/artworks-000028226543-6m0z2x-t500x500.jpg?4893871",
+	                "large": "http://i1.sndcdn.com/artworks-000028226543-6m0z2x-t500x500.jpg?4893871",
+	                "medium": "http://i1.sndcdn.com/artworks-000028226543-6m0z2x-t500x500.jpg?4893871"
+	            },
+	            "title": "Baby I Got That",
+	            "metadata_state": "complete",
+	            "edit_id": null,
+	            "sources": [
+	                "http://soundcloud.com/bondax/baby-i-got-that-1/s-x6vDI"
+	            ],
+	            "viewer_love": null,
+	            "recent_loves": [
+	                {
+	                    "username": "earsofthebeholder",
+	                    "comment": "",
+	                    "context": "null",
+	                    "source": "http://soundcloud.com/bondax/baby-i-got-that-1/s-x6vDI",
+	                    "created_on": "Wed Aug 22 22:54:51 +0000 2012",
+	                    "client_id": "exfm_site_player"
+	                },
+	                {
+	                    "username": "leopold_brunogay",
+	                    "comment": "",
+	                    "context": "",
+	                    "source": "http://soundcloud.com/bondax/baby-i-got-that-1/s-x6vDI",
+	                    "created_on": "Sat Sep 15 10:48:46 +0000 2012",
+	                    "client_id": "exfm_web"
+	                }
+	            ],
+	            "publish_date": null,
+	            "user_love": {
+	                "username": "siretsaame",
+	                "comment": "",
+	                "context": "",
+	                "source": "http://soundcloud.com/bondax/baby-i-got-that-1/s-x6vDI",
+	                "created_on": "Sun Oct 28 23:19:41 +0000 2012",
+	                "client_id": "exfm_web"
+	            },
+	            "last_loved": "Sun Oct 28 23:19:41 +0000 2012",
+	            "aliases": [],
+	            "loved_count": 3,
+	            "id": "qaf6n",
+	            "tags": [
+	                "chillout",
+	                "that thaaanng!",
+	                "ambient"
+	            ],
+	            "trending_rank_today": null
+	        }
+	    ]
+	}

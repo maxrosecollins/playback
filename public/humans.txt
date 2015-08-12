@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Sam Brown			Lead Front-End Devlopment
+    Ben Collins 		Lead Back-End Development
+    Max Rose-Collins 	Front-End Devlopment
+    Adam Sheidan		UI & UX Designer
+
+# THANKS
+
+	Youtube, Soundclound, Ex.FM, Discogs    
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
+    Coffee-Script, Backbone.js, Underscore.js
+    Sass, H5BP, Chrome
+

@@ -1,0 +1,50 @@
+        new_user_session GET    /users/sign_in(.:format)                   sessions#new
+            user_session POST   /users/sign_in(.:format)                   sessions#create
+    destroy_user_session GET    /users/sign_out(.:format)                  sessions#destroy
+           user_password POST   /users/password(.:format)                  devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)              devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)             devise/passwords#edit
+                         PUT    /users/password(.:format)                  devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)                    registrations#cancel
+       user_registration POST   /users(.:format)                           registrations#create
+   new_user_registration GET    /users/sign_up(.:format)                   registrations#new
+  edit_user_registration GET    /users/edit(.:format)                      registrations#edit
+                         PUT    /users(.:format)                           registrations#update
+                         DELETE /users(.:format)                           registrations#destroy
+                    user GET    /users/:id(.:format)                       users#show
+                         PUT    /users/:id(.:format)                       users#update
+           history_index GET    /history(.:format)                         history#index
+                         POST   /history(.:format)                         history#create
+             new_history GET    /history/new(.:format)                     history#new
+            edit_history GET    /history/:id/edit(.:format)                history#edit
+                 history GET    /history/:id(.:format)                     history#show
+                         PUT    /history/:id(.:format)                     history#update
+                         DELETE /history/:id(.:format)                     history#destroy
+     playlist_song_index GET    /playlists/:playlist_id/song(.:format)     song#index
+                         POST   /playlists/:playlist_id/song(.:format)     song#create
+       new_playlist_song GET    /playlists/:playlist_id/song/new(.:format) song#new
+               edit_song GET    /song/:id/edit(.:format)                   song#edit
+                    song GET    /song/:id(.:format)                        song#show
+                         PUT    /song/:id(.:format)                        song#update
+                         DELETE /song/:id(.:format)                        song#destroy
+               playlists GET    /playlists(.:format)                       playlists#index
+                         POST   /playlists(.:format)                       playlists#create
+            new_playlist GET    /playlists/new(.:format)                   playlists#new
+           edit_playlist GET    /playlists/:id/edit(.:format)              playlists#edit
+                playlist GET    /playlists/:id(.:format)                   playlists#show
+                         PUT    /playlists/:id(.:format)                   playlists#update
+                         DELETE /playlists/:id(.:format)                   playlists#destroy
+                         GET    /playlist_song(.:format)                   playlist_song#index
+                         POST   /playlist_song(.:format)                   playlist_song#create
+                         GET    /playlist_song/new(.:format)               playlist_song#new
+      edit_playlist_song GET    /playlist_song/:id/edit(.:format)          playlist_song#edit
+           playlist_song GET    /playlist_song/:id(.:format)               playlist_song#show
+                         PUT    /playlist_song/:id(.:format)               playlist_song#update
+                         DELETE /playlist_song/:id(.:format)               playlist_song#destroy
+              song_index GET    /song(.:format)                            song#index
+                         POST   /song(.:format)                            song#create
+                new_song GET    /song/new(.:format)                        song#new
+                         GET    /song/:id/edit(.:format)                   song#edit
+                         GET    /song/:id(.:format)                        song#show
+                         PUT    /song/:id(.:format)                        song#update
+                         DELETE /song/:id(.:format)                        song#destroy

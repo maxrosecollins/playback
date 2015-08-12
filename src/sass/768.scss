@@ -1,0 +1,1181 @@
+/* ==========================================================================
+   Desktop Styles
+   ========================================================================== */
+
+  html {
+    height: 100%;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #000;
+        opacity: 0;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #222222;
+        border-radius: 10px;
+      }
+  }
+
+  body {
+    background: #000;
+  }
+
+  .background-container {
+    /* background-image: url('../images/backgrounds/3/1920x1200.jpg'); */
+    background-position: 0 40px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    &.show {
+      z-index: 0;
+    }
+
+    &.show {
+      z-index: -1;
+    }
+  }
+
+  /* #background {
+    background-image: url('../images/backgrounds/3/1920x1200.jpg');
+  } */
+
+  #background {
+    display: block;
+    height: 100%;
+    li {
+      background-position: 0 40px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      opacity: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+
+      &.show {
+        
+      }
+    }
+
+    li[data-id="0"] {
+      background-image: url('../images/backgrounds/1/1920x1080.jpg');
+    }
+
+    li[data-id="1"] {
+      background-image: url('../images/backgrounds/2/1920x1080.jpg');
+    }
+
+    li[data-id="2"] {
+      background-image: url('../images/backgrounds/3/1920x1200.jpg');
+    }
+  }
+
+  .source {
+    background: transparent url('../images/icons/source-sprite.png') no-repeat;
+    display: block;
+    height: 32px;
+    text-indent: -9999px;
+    width: 32px;
+
+      &.yt {
+        background-position: 0 0;
+      }
+
+      &.sc {
+        background-position: -32px 0;
+      }
+
+      &.exfm {
+        background-position: -64px 0;
+      }
+
+      &.option {
+        float: left;
+      }
+  }
+
+  header[role="top"] {
+
+    #mobile-nav {
+      display: none;
+    }
+
+    #sections,
+    #login {
+      display: block;
+      height: 40px;
+      li {
+        width: 100px;
+
+        a {
+          color: #fff;
+          display: block;
+          font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+          height: 28px;
+          padding: 12px 0 0 0;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover {
+            background: #282828;
+            background: -moz-linear-gradient(top, #282828 0%, #000000 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(100%,#000000));
+            background: -webkit-linear-gradient(top, #282828 0%,#000000 100%);
+            background: -o-linear-gradient(top, #282828 0%,#000000 100%);
+            background: -ms-linear-gradient(top, #282828 0%,#000000 100%);
+            background: linear-gradient(to bottom, #282828 0%,#000000 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#000000',GradientType=0 );
+          }
+        }
+
+        &.active {
+          background: #282828;
+          background: -moz-linear-gradient(top, #282828 0%, #000000 100%);
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(100%,#000000));
+          background: -webkit-linear-gradient(top, #282828 0%,#000000 100%);
+          background: -o-linear-gradient(top, #282828 0%,#000000 100%);
+          background: -ms-linear-gradient(top, #282828 0%,#000000 100%);
+          background: linear-gradient(to bottom, #282828 0%,#000000 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#000000',GradientType=0 );
+
+          a {
+            color: #ffce00;
+          }
+        }
+      }
+    }
+  }
+
+  #queue-container {
+    display: none;
+    overflow: none;
+  }
+
+  #search-form {
+    display: none;
+    margin: 100px auto 0 auto;
+    max-width: 550px;
+    width: 80%;
+  }
+
+  #search-submit {
+    display: block;
+  }
+
+  .result-page {
+    width: 1040px;
+    height: 570px;
+  }
+
+  .search-result {
+    height: 215px;
+    margin: 0 24px 48px 0;
+    width: 206px;
+
+    &:hover {
+      .result-overlay {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background: rgba(0,0,0,0.7);
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .icon {
+          background-image: url('../images/mobile/ret-add-icon.png');
+          background-size: 60px 60px;
+          height: 60px;
+          margin: 40% auto 0 auto;
+          width: 60px;
+        }
+
+        h2 {
+          color: #fff;
+          font-size: 0.8em;
+          text-align: center;
+        }
+
+        .add-to-playlist {
+          background: #fff;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          color: #000;
+          display: block;
+          font-family: "proxima_nova_ltbold", sans-serif;
+          font-size: 0.9em;
+          margin: 0 auto;
+          padding: 5px;
+          text-align: center;
+          width: 100px;
+
+          &:hover {
+            background: #ffb200;
+          }
+        }
+      }
+    }
+
+    &.added {
+
+      .icon {
+        margin: 40% auto 0 auto !important;
+      }
+
+      &:hover {
+        .icon {
+          background-image: url('../images/mobile/ret-added-icon.png');
+          margin: 40% auto 0 auto !important;
+        }
+      }
+    }
+  }
+
+  .search-result:nth-child(even) {
+    margin: 0 0 48px 24px;
+  }
+  .thumbnail {
+    border: 1px solid rgba(255,255,255, 0.5);
+    box-shadow: 0px 0px 3px #585858;
+    width: 100%;
+  }
+  .search-result h2 {
+    font-size: 14px;
+  }
+  .search-result h3 {
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .source {
+    float: right;
+    height: 32px;
+    width: 32px;
+  }
+
+  #pagination ul li {
+    margin: 0 15px 0 0;
+  }
+
+  #pagination ul li a {
+    background: url('../images/pip-sprite.png') -22px 0 no-repeat;
+  }
+
+  #pagination ul li a#current {
+    background-position: 0 0;
+  }
+
+  #player .playpause, #player .next, #player .prev, #player .up-vote, #player .down-vote {
+    background-image: url('../images/icons/play-controls-sprite.png');
+    background-size: 320px 80px;
+    float: left;
+    height: 40px;
+    margin: 5px 10px 5px 5px;
+    width: 40px;
+  }
+
+  .time {
+    display: block;
+  }
+
+  .track {
+    width: 110px;
+  }
+
+  .volume-container {
+    position:absolute;
+    background-image:url('../images/icons/play-controls-sprite.png');
+    background-repeat:no-repeat;
+  }
+
+  .export {
+    display: none;
+    position: absolute;
+    right: 50px;
+    width: 120px;
+
+    #icon {
+      background: url('../images/export-icon.png');
+      height: 5px;
+      position: absolute;
+      right: 13px;
+      top: 22px;
+      width: 9px;
+    }
+
+  }
+
+  .export-menu {
+    list-style: none;
+    border-radius: 5px;
+    background: #000;
+    position: relative;
+    width: 175px;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0;
+    z-index: 10;
+    bottom: 125px;
+    margin-bottom: 0;
+    margin-left: -32px;
+    max-height: 200px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px; }
+    &::-webkit-scrollbar-track {
+      background: #111111; 
+      border-radius: 10px;}
+    &::-webkit-scrollbar-thumb {
+      background: #515151;
+      border-radius: 10px; }
+
+    li {
+      display: block;
+      float: left;
+      width: 100%;
+      font-size: 13px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li:hover {
+      background: #303030;
+    }
+    li.new-playlist-form:hover
+    {
+      background: #000;
+    }
+    a {
+      padding: 7px 10px;
+      display: block;
+    }
+    li.new-playlist-form{
+      padding: 5px 7px;
+    }
+    li.new-playlist-form input{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #696969;
+      display: block;
+      font-family: 'proxima_nova_ltbold';
+      padding: 5px;
+      width: 150px;
+    }
+  }
+
+  .export_queue {
+    width: 100px;
+    color: white;
+    line-height: 50px;
+    font-size: 14px;
+    background: #1b1b1b;
+    background: -moz-linear-gradient(top, #1b1b1b 0%, #151515 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1b1b1b), color-stop(100%, #151515));
+    background: -webkit-linear-gradient(top, #1b1b1b 0%, #151515 100%);
+    background: -o-linear-gradient(top, #1b1b1b 0%, #151515 100%);
+    background: -ms-linear-gradient(top, #1b1b1b 0%, #151515 100%);
+    background: linear-gradient(to bottom, #1b1b1b 0%, #151515 100%);
+    margin: 0 0 0 -15px;
+    padding: 0 15px 0 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .votes {
+    display: block;
+  }
+
+  #modal-wrapper {
+    display: block;
+  }
+
+  header[role="top"] #login {
+    display: block;
+  }
+
+  .wrapper {
+    margin: 0;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin-left: 0;
+  }
+
+  .main.wrapper {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #111111;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #515151;
+      border-radius: 10px;
+    }
+  }
+
+  header nav[role="main"] ul li a {
+    background: transparent;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 14px;
+    margin: 8px 0;
+    padding: 4px 17px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background: #222;
+    }
+
+  }
+
+  .header-container {
+    background: #000000;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    #login {display:none}
+
+    .show-queue,
+    .hide-queue {
+      display: none;
+    }
+
+  }
+
+  .user-dropdown {
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+    .bar {
+      height: 100%;
+      font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      margin-right: 25px;
+      background: #303030;
+      background: -moz-linear-gradient(top,  #303030 0%, #151515 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303030), color-stop(100%,#151515));
+      background: -webkit-linear-gradient(top,  #303030 0%,#151515 100%);
+      background: -o-linear-gradient(top,  #303030 0%,#151515 100%);
+      background: -ms-linear-gradient(top,  #303030 0%,#151515 100%);
+      background: linear-gradient(to bottom,  #303030 0%,#151515 100%);
+
+      img {
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin: 7px 10px;
+      }
+
+      span {
+        margin-right: 15px;
+        color: #F1F1F1;
+        line-height: 40px;
+      }
+
+    }
+
+    .menu {
+
+      list-style: none;
+      border-radius: 5px;
+      background: #000;
+      position: relative;
+      width: 175px;
+      display: block;
+      overflow: hidden;
+      padding: 10px 0;
+      margin-top: 10px;
+      float: right;
+      margin-right: 25px;
+
+      li {
+        display: block;
+        float: left;
+        width: 100%;
+        font-size: 13px;
+        padding: 0;
+        overflow: hidden;
+
+          a {
+            padding: 7px 10px;
+            display: block;
+          }
+
+          a, a:hover, a:visited {
+            color: #F1F1F1;
+            text-decoration: none;
+          }
+      }
+
+      li:hover {
+        background: #303030;
+      }
+
+      &.hidden {display:none}
+  }
+
+}
+
+.source {
+  background-color: transparent;
+  background-image: url('../images/icons/source-sprite.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 32px;
+  text-indent: -9999px;
+  width: 32px;
+
+    &.yt {
+      background-position: 0 0;
+    }
+
+    &.sc {
+      background-position: -32px 0;
+    }
+
+    &.ex {
+      background-size: auto;
+      background-position: -64px 0;
+    }
+
+    &.option {
+      float: left;
+    }
+}
+
+.result-page {
+  height: 570px;
+  width: 1040px;
+}
+
+  #search {
+    display: table-cell;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  #search-form {
+    display: table;
+    width: 550px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -242px;
+    :focus { outline: none; }
+  }
+
+  #result-options,
+  .search-result,
+  #pagination {
+    display: none;
+  }
+
+  .main.is-searching #result-options,
+  .main.is-searching #search-results,
+  .main.is-searching #pagination {
+    display: block;
+  }
+
+  .main.is-active  {
+    margin: 100px 0 auto 0;
+  }
+
+  #result-options {
+    width: 1040px;
+    margin-top: 100px;
+  }
+  #search-results {
+    margin: 40px auto 0 auto;
+    width: 1040px;
+  }
+    .search-result {
+      height: 215px;
+      margin: 0 20px 40px 20px;
+      padding: 15px;
+      width: 190px;
+    }
+    .search-result:first-child{
+      margin: 0 20px 40px 20px;
+    }
+    .search-result:nth-child(3n+4) {
+      margin: 0 20px 40px 20px;
+    }
+    .search-result:nth-child(3n+3) {
+      margin: 0 20px 40px 20px;
+    }
+    .search-result:nth-child(even) {
+      margin: 0 20px 40px 20px;
+    }
+
+  #queue-container {
+    display: block;
+    height: 100%;
+    margin-left: -310px;
+    position: fixed;
+    top: 0; 
+    width: 300px;
+  }
+
+  .queue-wrap {
+    bottom: 0;
+    height: auto;
+    left: 0;
+    margin: 40px 0 50px 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+    #queue-container #artwork {
+      display: block;
+      height: 300px;
+      width: 300px;
+    }
+
+    .current-song-meta {
+      margin: 0 0 10px 0;
+    }
+
+    .current-song-meta .song-title-wrap {
+      height: 48px;
+      overflow: hidden;
+      margin: 10px 0 10px 0;
+      padding: 0 20px 0 20px;
+      display: table;
+
+      h2 {
+        color: #ffffff;
+        font-size: 20px;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+      }
+    }
+
+    .current-song-meta h3 {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: normal;
+      margin: 0;
+      padding: 0 20px 0 20px;
+    }
+
+    #queue-container .current-playlist {
+      background-color: #222222;
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222222), to(#191919));
+      background-image: -webkit-linear-gradient(top, #222222, #191919);
+      background-image:    -moz-linear-gradient(top, #222222, #191919);
+      background-image:     -ms-linear-gradient(top, #222222, #191919);
+      background-image:      -o-linear-gradient(top, #222222, #191919);
+      border: 1px solid #191919;
+      color: #ffffff;
+      display: block;
+      overflow: hidden;
+    }
+
+    .current-playlist h2 {
+        float: left;
+        font-size: 14px;
+        margin: 13px 0 13px 0;
+        padding: 0 0 0 10px;
+        width: 200px;
+      }
+
+    .current-playlist h2 span {
+          font-weight: normal;
+    }
+
+    #track-number {
+      font-size: 14px;
+      float: right;
+      margin: 13px 0 13px 0;
+      padding: 0 20px 0 0;
+      width: 30px;
+    }
+
+    #queue {
+      display: block;
+      height: 100px;
+      list-style-type: none;
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      padding: 0;  
+      position: static;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #111111;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #515151;
+        border-radius: 10px;
+      }
+    }
+
+      #queue li.queue-entry {
+        background-color: #222222;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222222), to(#191919));
+        background-image: -webkit-linear-gradient(top, #222222, #191919);
+        background-image:    -moz-linear-gradient(top, #222222, #191919);
+        background-image:     -ms-linear-gradient(top, #222222, #191919);
+        background-image:      -o-linear-gradient(top, #222222, #191919);
+        border: 1px solid #191919;
+        min-height: 81px;
+
+        img {
+          border: 0;
+          background: url('../images/blank.png');
+          display: block;
+        }
+
+        &:hover {
+          background-color: #303030;
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#393939), to(#303030));
+          background-image: -webkit-linear-gradient(top, #393939, #303030);
+          background-image:    -moz-linear-gradient(top, #393939, #303030);
+          background-image:     -ms-linear-gradient(top, #393939, #303030);
+          background-image:      -o-linear-gradient(top, #393939, #303030);
+          border: 1px solid #434343;
+        }
+
+        .touch {
+          display: none;
+        }
+
+        .track {
+          height: 50px;
+          font-family: 'proxima_nova_ltbold', sans-serif;
+          float: left;
+          font-size: 1em;
+          margin: 22px 0 5px 0;
+          padding: 0 0 0 20px;
+          width: 160px;
+          height: 35px; //This could use the text ellipsis.
+
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        .artist {
+          display: block;
+          font-family: 'proxima_nova_ltbold', sans-serif;
+          font-size: 12px;
+          float: left;
+          margin: 0;
+          min-height: 13px;
+          padding: 0 20px;
+          width: 120px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+
+        .time {
+          display: block;
+          font-family: 'proxima_nova_ltbold', sans-serif;
+          font-size: 12px;
+          float: left;
+          margin: 0;
+          padding: 0;
+        }
+
+        img {
+          float: right;
+          height: 50px;
+          padding: 0;
+          position: absolute;
+          top: 25px;
+          right: 40px;
+          width: 50px;
+        }
+
+      }
+      .current-song {
+        background-color: #fed200 !important;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fed200), to(#ffa900)) !important;
+        background-image: -webkit-linear-gradient(top, #fed200, #ffa900) !important;
+        background-image:    -moz-linear-gradient(top, #fed200, #ffa900) !important;
+        background-image:     -ms-linear-gradient(top, #fed200, #ffa900) !important;
+        background-image:      -o-linear-gradient(top, #fed200, #ffa900) !important;
+        border: 1px solid #fffe03 !important;
+      }
+      .current-song h2, .current-song h3 {
+        color: #333;
+      }
+    .track {
+      float: left;
+      font-size: 12px;
+      margin: 22px 0 5px 0;
+      padding: 0 0 0 20px;
+      width: 200px;
+    }
+    .artist {
+      font-size: 12px;
+      float: left;
+      margin: 0;
+      padding: 0 0 0 20px;
+    }
+    .time {
+      font-size: 12px;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    #queue .queue-entry .track-options {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 27px;
+    }
+    #queue > li:hover .track-options {
+      //display: block; //temp disabled for release 1 feedback
+    }
+    .track-options li {
+      border-radius: 3px;
+      height: 16px;
+      padding: 5px;
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      width: 16px;
+        &:hover {
+          background: rgba(255,255,255,0.3);
+        }
+    }
+
+    .track-remove {
+      background: url("../images/queue-sprite.png") -48px -48px no-repeat;
+      cursor: pointer;
+      display: block;
+      height: 16px;
+      text-indent: -9999px;
+      width: 16px;
+
+        &:hover {
+          background: url("../images/queue-sprite.png") -48px -48px no-repeat;
+        }
+    }
+
+    .current-song .track-remove {
+      background: url("../images/queue-sprite.png") -48px -16px no-repeat;
+      cursor: pointer;
+      display: block;
+      height: 16px;
+      text-indent: -9999px;
+      width: 16px;
+
+        &:hover {
+          background: url("../images/queue-sprite.png") -48px -48px no-repeat;
+        }
+    }
+
+    .track-add {
+      background: url("../images/queue-sprite.png") -32px 0px no-repeat;
+      display: block;
+      height: 16px;
+      margin: 5px 0 0 4px;
+      text-indent: -9999px;
+      width: 16px;
+    }
+      .track-add:hover {
+        background: url("../images/queue-sprite.png") -32px -32px no-repeat;
+      }
+    .track-flag {
+      background: url("../images/queue-sprite.png") -16px 0px no-repeat;
+      display: block;
+      height: 16px;
+      margin: 5px 0 0 4px;
+      text-indent: -9999px;
+      width: 16px;
+    }
+      .track-flag:hover {
+        background: url("../images/queue-sprite.png") -16px -32px no-repeat;
+      }
+  #results-container {
+    float: left;
+    margin: 0 auto;
+    // min-width: 1100px;
+    width: 80%;
+  }
+
+  .login.modal, .signup.modal, #modal-wrapper {display: none}
+
+  #modal-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    .overlay.clickzone {
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      background: rgba(0,0,0,0.6);
+    }
+  }
+
+  .signup.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -230px;
+  }
+
+  .login.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -190px;
+  }
+
+  #login-container form {height:330px;}
+  #signup-container form {height:410px;}
+  #signup-container form .error {line-height: 42px;}
+
+  #login-container, #signup-container {
+    background: rgba(0,0,0,0.3);
+    border: 10px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    display: absolute;
+    margin: 0;
+    width: 400px;
+    z-index: 500;
+
+    & .close-form {
+      background: #000000 url('../images/cross.png') no-repeat 11px 11px;
+      border: 5px solid #c7c7c7;
+      border-radius: 22px;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      height: 34px;
+      position: relative;
+      top: -26px;
+      right: -26px;
+      width: 34px;
+      z-index: 10;
+    }
+
+    & form {
+
+      .error {
+        width: 180px;
+        float: left;
+        display: block;
+        margin-top: 4px;
+        color: red;
+        display: none;
+      }
+
+      background: #e7e7e8;
+      border-radius: 5px;
+
+      & fieldset {
+        position: relative;
+        top: -44px;
+        & legend {
+          background-color: #fff600;
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff600), to(#ffa900));
+          background-image: -webkit-linear-gradient(top, #fff600, #ffa900);
+          background-image:    -moz-linear-gradient(top, #fff600, #ffa900);
+          background-image:     -ms-linear-gradient(top, #fff600, #ffa900);
+          background-image:      -o-linear-gradient(top, #fff600, #ffa900);
+          border-bottom: 1px solid #b7b7b7;
+          border-radius: 5px 5px 0 0;
+          font-size: 20px;
+          padding: 20px 0 20px 20px;
+          width: 380px;
+        }
+        & ul {
+          border-top: 1px solid #ffffff;
+          list-style-type: none;
+          margin: 0;
+          overflow: hidden;
+          padding: 0;
+
+          & li {
+            display: block;
+            margin: 25px auto 25px auto;
+            overflow: hidden;
+            width: 300px;
+
+            & label {
+              display: block;
+              font-size: 16px;
+              margin: 0 0 5px 0;
+            }
+
+            & input[type="email"], input[type="password"] {
+              background: #c7c7c7;
+              border: 1px solid #939393;
+              border-radius: 3px;
+              // -moz-box-shadow: inset 0 0 5px #000000;
+              // -webkit-box-shadow: inset 0 0 5px #000000;
+              box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2);
+              height: 30px;
+              outline: none;
+              width: 296px;
+            }
+            input[type="submit"] {
+              background-color: #fff600;
+              background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff600), to(#ffa900));
+              background-image: -webkit-linear-gradient(top, #fff600, #ffa900);
+              background-image:    -moz-linear-gradient(top, #fff600, #ffa900);
+              background-image:     -ms-linear-gradient(top, #fff600, #ffa900);
+              background-image:      -o-linear-gradient(top, #fff600, #ffa900);
+              border: 1px solid #ffc600;
+              border-radius: 5px;
+              float: right;
+              height: 40px;
+              width: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+.show-queue,
+.hide-queue {
+  display: none;
+}
+
+#pagination ul li {
+  margin: 0 15px 0 0;
+}
+
+body > #player {
+  bottom: 0;
+  display: block;
+
+  .seek {
+    display: block;
+    left: 500px;
+  }
+
+  .artist {
+    display: block;
+  }
+
+  .time {
+    display: block;
+  }
+
+  .volume-container {
+    display: block;
+  }
+
+  .votes {
+    display: block;
+  }
+
+  .export {
+    display: block;
+    font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+  }
+
+}
+
+#background-switch {
+  background: url('../images/background-icon.png') 8px 9px no-repeat;
+  bottom: 65px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  height: 32px;
+  padding: 0;
+  position: fixed;
+  right: 20px;
+  width: 32px;
+
+  ul {
+    bottom: 70px;
+    display: none;
+    height: 75px;
+    right: 300px;
+    padding: 0;
+    position: relative;
+    width: 300px;
+
+    li {
+      background: #fff;
+      border: 1px solid white;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+      float: left;
+      height: 75px;
+      list-style-type: none;
+      margin: 0 20px 0 0;
+      opacity: 0;
+      width: 75px;
+    }
+
+    li[data-id="0"] {
+      background: url('../images/backgrounds/thumbs/1.jpg');
+    }
+
+    li[data-id="1"] {
+      background: url('../images/backgrounds/thumbs/2.jpg');
+    }
+
+    li[data-id="2"] {
+      background: url('../images/backgrounds/thumbs/3.jpg');
+    }
+  }
+
+  &:hover {
+    background-color: rgba(255,255,255,0.3);
+  }
+}

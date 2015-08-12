@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="icon" type="image/png" href="images/favicon32.png">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="playback.io">
+        <meta http-equiv="cleartype" content="on">
+
+        <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;' />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+        
+        <link rel="shortcut icon" href="images/touch/apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div id="modal-wrapper">
+
+            <div class="signup modal">
+
+                <div id="signup-container">
+                    <div class="close-form">&nbsp;</div>
+                    <form class="sign-up">
+                        <fieldset>
+                            <legend>Create User</legend>
+                            <ul>
+                                <li>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" />
+                                </li>
+                                <li>
+                                    <label for="confirm-email">Confirm Email Address</label>
+                                    <input type="email" id="confirm-email" />
+                                </li>
+                                <li>
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" />
+                                </li>
+                                <li>
+                                    <span class="error">Sign-up failed.</span>
+                                    <input type="submit" value="Okay" />
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="login modal">
+
+                <div id="login-container">
+                    <div class="close-form">&nbsp;</div>
+                    <form>
+                        <fieldset>
+                            <legend>Log In</legend>
+                            <ul>
+                                <li>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" />
+                                </li>
+                                <li>
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" />
+                                </li>
+                                <li>
+                                    <span class="error">Login failed. Please check your credentials.</span>
+                                    <input type="submit" value="Okay" />
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="overlay clickzone"></div>
+
+        </div>
+
+        <ul id="background">
+            <li data-id="0" class="show"></li>
+            <li data-id="1"></li>
+            <li data-id="2"></li>
+        </ul>
+
+        <div class="header-container">
+            <header role="top" class="wrapper clearfix">
+                <a href="#"><h2 class="logo">playback.io</h2></a>
+                <nav id="sections" style="float:left">
+                    <ul>
+                        <li style="float:left"><a href="#">Browse</a></li>
+                        <li style="float:left"><a href="#profile">Profile</a></li>
+                    </ul>
+                </nav>
+                <nav id="login">
+                    <ul>
+                        <li><a href="#" class="login">Log in</a></li>
+                        <li><a href="#" class="signup">Signup</a></li>
+                    </ul>
+                </nav>
+                <nav class="user-dropdown">
+                </nav>
+                <nav id="mobile-nav">
+                    <button class="show-queue">Show</button>
+                    <button class="hide-queue">Hide</button>
+                </nav>
+            </header>
+        </div>
+
+
+        <div class="main-container">
+
+            <div class="main wrapper clearfix">
+
+                <div id="search" style="display:none;">
+
+                    <form id="search-form">
+                        <input type="text" value="" placeholder="Search" id="search-input" autofocus>
+                        <button type="submit" id="search-submit">Search</button>
+                    </form>
+
+                    <div id="result-options">
+                        <ul id="results-source">
+                            <li>
+                                <a href="#" class="option source yt">YouTube</a>
+                                <input type="checkbox" class="option-select yt" checked>
+                            </li>
+                            <li>
+                                <a href="#" class="option source sc">SoundCloud</a>
+                                <input type="checkbox" class="option-select sc" checked>
+                            </li>
+                            <li>
+                                <a href="#" class="option source exfm">ExFM</a>
+                                <input type="checkbox" class="option-select exfm" checked>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul id="page-0" class="result-page clearfix">
+                    </ul>
+
+                    <nav id="pagination">
+                        <ul class="clearfix">
+                        </ul>
+                    </nav>
+
+                </div> <!-- #search -->
+
+                <div id="user_view" style="display:none;"></div>
+
+            </div>  <!-- #main -->
+
+        </div> <!-- #main-container -->
+
+        <button id="background-switch">
+            <ul>
+                <li class="background" data-id="0"></li>
+                <li class="background" data-id="1"></li>
+                <li class="background" data-id="2"></li>
+            </ul>
+        </button>
+
+
+        <div id="landing" style="display:none">
+            <h1>LandingView</h1>
+        </div>
+
+        <div id="player" class="clearfix">
+
+            <div class="controls loading">
+                <a class="playpause ir paused" href="#" title="" data-bypass="true">Play Track.</a>
+                <a class="prev ir" href="#" data-skip-direction="backwards" title="" data-bypass="true">Previous Track.</a>
+                <a class="next ir" href="#" data-skip-direction="forwards" title="" data-bypass="true">Next Track.</a>
+                <a class="track" href="#" title=""></a>
+                <a class="time" href="#" title="[Track time]">
+                    <span class="current-time">0:00</span> / <span class="length">00:00</span>
+                </a>
+            </div>
+
+            <div class="seek">
+                <div class="progress-bar">
+                    <a class="handle ir" title="Skip to [time]"></a>
+                </div>
+            </div>
+
+            <div class="volume-container">
+                <div class="volume">
+                    <div class="volume-bar">
+                        <div class="volume-level">
+                            <div class="handle ir" title="Skip to [time]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="export">
+                <div class="export_queue"><span>Export Queue</span></div>
+                <div id="icon"></div>
+                <ul class="export-menu hidden"></ul>
+            </div>
+
+            <div id="yt_player"></div>
+
+            <audio id="ex_player" src="" controls="controls"></audio>
+
+        </div>
+
+        <div id="queue-container">
+
+            <div class="queue-wrap">
+
+                <img src="images/white-label-blank.jpg" id="artwork"/>
+
+                <div class="current-playlist">
+                    <h2><span>Playlist:</span> None</h2>
+                    <div id="track-number">—</div>
+                </div>
+
+                <ul id="queue">
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script id="search-results-template" type="text/x-underscore-template">
+
+                <%
+                    if (results)
+                        var pageStartItem = startAt*perPage
+                        results = results.slice(pageStartItem, pageStartItem+perPage);
+                %>
+
+                <% _.each(results, function(result) { %>
+
+                    <li class="search-result" data-source="<%= result.source %>" data-id="<%= result.id %>" data-title="<%= result.title %>" data-owner="<%= result.owner %>" data-duration="<%= result.duration %>" data-thumbnail="<%= result.thumbnail %>">
+
+                        <div class="result-overlay">
+                            <div class="icon"></div>
+                            <% if (Modernizr.touch == false) { %>
+                                <h2 class="message">Add to Queue</h2>
+                                <a class="add-to-playlist">Add to Playlist</a>
+                            <% } else { %>
+                                <h2 class="message">Added to Queue</h2>
+                            <% } %>
+                        </div>
+
+                        <% if (result.thumbnail !== null) { %>
+                            <img src="<%= result.thumbnail %>" class="thumbnail">
+                        <% } else { %>
+                            <img src="images/preview.png" class="thumbnail not-found" data-title="<%= result.title %>">
+                        <% } %>
+
+                        <h2><%= result.title %></h2>
+
+                        <h3 class="owner">by <%= result.owner %></h3>
+                        <a href="<%= result.permalink %>" class="source <%= result.source %>"></a>
+                        <!--<img src="images/icons/social/32x32/YouTube.png" class="source">-->
+                    </li>
+
+                <% }); %>
+
+        </script>
+
+        <script id="queue-entry-template" type="text/x-underscore-template">
+            <li class="queue-entry">
+                <% if (Modernizr.touch == true) { %>
+                <a href="" class="touch"></a>
+                <% } %>
+
+                    <h2 class="track"><%= title %></h2>
+                    <h3 class="artist"><%= owner %></h3>
+                    <% if (source != 'ex') { %>
+                        <h3 class="time"><%= human_duration %></h3>
+                    <% } %>
+                    
+                    <img src="<%= thumbnail %>"/>
+                    <ul class="track-options">
+                        <li style="cursor:pointer"><a class="track-remove">x</a></li>
+                    </ul>
+            </li>
+        </script>
+
+        <script id="user-dropdown-template" type="text/x-underscore-template">
+            <div class="bar">
+                <img src="<%= gravatar_url %>"/>
+                <span><%= email %></span>
+            </div>
+            <ul class="menu hidden">
+                <li><a href="#edit-profile">Edit Profile</a></li>
+                <li><a href="" class="logout">Logout</a></li>
+            </ul>
+        </script>
+
+        <script id="user-view-template" type="text/x-underscore-template">
+            <article class="content-page" id="profile_view">
+
+                <header>
+                    <a href="#profile">
+                    <div class="avatar" style="background: url('<%= user.gravatar_url %>?s=129'); background-size: 129px 129px; position: absolute; left: 30px; top: -60px;"></div></a>
+                    <h1><%= user.email %></h1>
+                    <% if (user.username) { %>
+                        <h2>http://playback.io/#<%= user.username %></h2>
+                    <% } else { %>
+                        <h2>Set your username to get a public profile.</h2>
+                    <% } %>
+                    <% if (typeof(is_public) === "undefined") { %>
+                        <a href="#edit-profile" class="cta yellow">Edit</a>
+                    <% } %>
+                </header>
+
+                <nav role="sub-nav">
+                    <ul class="clearfix">
+                        <li><a href="#recent-listens">Recent Listens</a></li>
+                        <li><a href="#playlists" class="current">Saved Playlists</a></li>
+                    </ul>
+                </nav>
+
+                <section id="profile-summary" style="display:none;">
+                    <section class="module recent-listens"></section>
+                    <section class="module saved-playlists"></section>
+                </section>
+
+                <section id="saved-playlists" class="module" style="display:none;">
+                </section>
+
+                <section id="recent-listens" class="module" style="display:none;">
+                </section>
+
+                <section id="single-playlist" class="module" style="display:none;">
+                </section>
+
+                <section id="edit-profile" class="module" style="display:none;">
+                    <h1 class="module-title">Edit Profile</h1>
+                    <form id="edit-profile">
+                        <label>Username</label>
+                        <input type="text" name="username" class="new-username"/>
+
+                        <h3>Change Password</h3>
+
+                        <label>Current Password</label>
+                        <input type="password" name="curPassword">
+
+                        <label>New Password</label>
+                        <input type="password" name="curPassword">
+
+                        <label>Confirm New Password</label>
+                        <input type="password" name="curPassword">
+
+                        <button type="submit" class="cta yellow">Submit</button>
+                    </form>
+                </section>
+
+            </article>
+        </script>
+
+        <script id="saved-playlists-template" type="text/x-underscore-template">
+            <h1 class="module-title">Saved Playlists (<%= playlists.length %>)</h1>
+
+                <ul class="clearfix three-col">
+
+                <%  
+                    if (typeof(summary) !== "undefined" && summary === true) {
+                        var limit = 2;
+                    }
+                %>
+
+                    <% _.each(playlists, function(playlist, i) { %>
+                        <% if (typeof(limit) !== "undefined" && i > limit) {
+                            return false;
+                        } %>
+
+                        <li class="col">
+                            <a href="#playlists/<%= playlist.id %>">
+                                <h1 class="title"><%= playlist.title %></h1>
+                                <ul>
+                                    <% _.each(playlist.playlist_songs, function(playlist_song, i) { %>
+                                        <% if (i < 5) { %>
+                                            <% song = playlist_song.song %>
+                                            <% if (song) { %>
+                                            <li><%= song.title %></li>
+                                            <% } %>
+                                        <% } %>
+                                    <% }); %>
+                                </ul>
+                            </a>
+                        </li>
+                    <% }); %>
+                </ul>
+
+                <% if (typeof(summary) !== "undefined" && summary === true) { %>
+                    <a href="#playlists" class="more">More Playlists</a>
+                <% } %>
+        </script>
+
+        <script id="single-playlist-template" type="text/x-underscore-template">
+            <a href="#playlists" class="back-link">« Back to Saved Playlists</a>
+            <section id="playlist-single" class="module">
+                
+                <a href="#" class="queue-all cta yellow" data-bypass="true">Queue All</a>
+                <h1 class="module-title"><%= playlist.title %></h1>
+                <ul>
+                    <% _.each(playlist.playlist_songs, function(playlist_song) {  %>
+                        <% song = playlist_song.song %>
+                        <% if (song) { %>
+                        <li>
+                            <%= song.title %>
+                            <ul class="options">
+                                <li><a href="#" class="add-queue" data-bypass="true" data-source="<%= song.source %>" data-id="<%= song.source_id %>" data-title="<%= song.title %>" data-duration="<%= song.duration %>" data-owner="<%= song.owner %>" data-thumbnail="<%= song.thumbnail %>">Add to Queue</a></li>
+                                <li><a href="#" class="remove-playlist" data-bypass="true" data-source="<%= song.source %>" data-id="<%= song.source_id %>" data-title="<%= song.title %>" data-duration="<%= song.duration %>" data-owner="<%= song.owner %>" data-thumbnail="<%= song.thumbnail %>">Remove from playlist</a></li>
+                            </ul>
+                        </li>
+                        <% } %>
+                    <% }); %>
+                </ul>
+
+            </section>
+        </script>
+
+        <script id="recent-listens-template" type="text/x-underscore-template">
+            <h1 class="module-title">Recent Listens</h1>
+            <ul class="clearfix three-col">
+                <%
+                    var limit = 9;
+                    if (typeof(summary) !== "undefined" && summary === true) {
+                        limit = 3;
+                    }
+                %>
+
+                <% _.each(songs, function(song, i) { %>
+                    <% if (i < limit) { %>
+                    <li class="col">
+                        <a href="#" data-bypass="true" data-source="<%= song.song.source %>" data-id="<%= song.song.source_id %>" data-title="<%= song.song.title %>" data-duration="<%= song.song.duration %>" data-owner="<%= song.song.owner %>" data-thumbnail="<%= song.song.thumbnail %>">
+                            <% if (song.song.thumbnail === null) { %>
+                                <img src="images/preview.png" class="thumbnail">
+                            <% } else { %>
+                                <img src="<%= song.song.thumbnail %>" class="thumbnail">
+                            <% } %>
+                            <h1 class="song-title"><%= song.song.title %></h1>
+                            <h2 class="duration"><%= song.song.duration.toHHMMSS() %></h2>
+                        </a>
+                    </li>
+                    <% } %>
+                <% }); %>
+            </ul>
+
+            <% if (typeof(summary) !== "undefined" && summary === true) { %>
+                <a href="#recent-listens" class="more">More Listens</a>
+            <% } %>
+            
+        </script>
+
+
+        <script id="export-queue-template" type="x-underscore-template">
+            <li><a href="#" class="new" data-bypass="true">Create New Playlist</a></li>
+            <li class="new-playlist-form" style="display:none;"><form><input type="text" placeholder="New playlist"/></form></li>
+            <% _.each(playlists, function(playlist) { %>
+                <li><a href="#playlists/<%= playlist.id %>" class="playlist"><%= playlist.title %></a></li>
+            <% }); %>
+        </script>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery-ui-1.10.2.custom.min.js"></script>
+
+        <script src="js/vendor/underscore.js"></script>
+        <script src="js/vendor/backbone.js"></script>
+        <script src="js/vendor/jquery.hammer.min.js"></script>
+
+        <script src="//w.soundcloud.com/player/api.js"></script>
+        <script src="http://connect.soundcloud.com/sdk.js"></script>
+
+        <!-- Player-specific controllers: These can be concat'd into 1 later -->
+        <script src="js/soundcloud.js"></script>
+        <script src="js/youtube.js"></script>
+        <script src="js/exfm.js"></script>
+        <script src="js/lastfm.js"></script>
+        <script src="js/discogs.js"></script>
+
+        <!-- Main app -->
+        <script src="js/app.js"></script>
+
+        <script>
+          var tag = document.createElement('script');
+          tag.src = "//www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        </script>
+
+        <script>
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-38103869-1']);
+          _gaq.push(['_setDomainName', 'playback.io']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+        <script>
+
+        $(document).ready(function(){
+
+            function resizeQueue() {
+
+                var w = $(window).height(),
+                    headerHeight = $('.header-container').height(),
+                    artworkHeight = $('#artwork').height(),
+                    curPlaylistHeight = $('.current-playlist').height(),
+                    playerHeight = $('#player').height(),
+                    t = headerHeight + artworkHeight + curPlaylistHeight + playerHeight,
+                    h = w - t;
+
+                $('#queue').css('height', h+'px');
+
+            }
+
+            $(window).resize(function(){
+                resizeQueue();
+            });
+
+            resizeQueue();
+
+        });
+        
+
+        var w = $(window).width();
+
+        console.log(Modernizr.touch);
+
+        $('#queue').hammer().on("swipeleft", ".touch", function(e){
+            $(this).parent().bind('transitionend, webkitTransitionEnd', function(e){
+                $(this).hide();
+            });
+            $(this).parent().css({
+                'background-color':'#000',
+                'webkit-transform':'translate3d(-400px,0,0) rotate(15deg)'
+            });
+            var song_index = $($(this).parent()).index();
+            app.queue.songs.splice(song_index, 1);
+            app.view.QueueView.updateQueuePosition(song_index);
+        });
+
+        $('body').hammer().on("swiperight", ".header-container", function(e){
+            e.preventDefault();
+            $('#queue').css({
+                '-webkit-transform':'translate3d('+w+'px, 0, 0)',
+            });
+            $('#queue').removeClass('show').hide();
+            $('.hide-queue').fadeOut(100);
+            $('.show-queue').fadeIn(100);
+        });
+
+        $('body').hammer().on("swipeleft", ".header-container", function(e){
+            e.preventDefault();
+            var h = $(document).height();
+            $('#queue').css({
+                'display':'block',
+                '-webkit-transform':'translate3d(0, 0, 0)',
+                'height': h
+            });
+            $('#queue').addClass('show');
+            $('.hide-queue').fadeIn(100);
+            $('.show-queue').fadeOut(100);
+        });
+
+        if (Modernizr.touch === true) {
+            $('#queue').css({
+                'transform':'translate3d('+w+'px, 0, 0)'
+            });
+        }
+
+        $(document).on('touchstart', '.show-queue', function(e){
+            e.preventDefault();
+            var h = $(document).height();
+            $('#queue').css({
+                'display':'block',
+                '-webkit-transform':'translate3d(0, 0, 0)',
+                'height': h
+            });
+            $('#queue').addClass('show');
+            $('.hide-queue').fadeIn(100);
+            $('.show-queue').fadeOut(100);
+        });
+
+        $(document).on('touchstart', '.hide-queue', function(e){
+            e.preventDefault();
+            $('#queue').css({
+                '-webkit-transform':'translate3d('+w+'px, 0, 0)',
+            });
+            $('#queue').removeClass('show').hide();
+            $('.hide-queue').fadeOut(100);
+            $('.show-queue').fadeIn(100);
+        });
+
+        /* $('.show-queue').click(function(e){
+            e.preventDefault();
+
+        });
+
+        $('.hide-queue').click(function(e){
+            e.preventDefault();
+            $('#queue').removeClass('show');
+        }); */
+
+        
+        $(document).ready(function(){
+
+          $('#background .show').animate({'opacity':'1'});
+
+        }); 
+
+        $('#background-switch').click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if ($(this).hasClass('open')) {
+                $(this).children('ul').fadeOut(300);
+                $(this).removeClass('open');
+                $('.background').css('opacity','0');
+            } else {
+                $(this).addClass('open');
+                $(this).children('ul').fadeIn(300);
+                
+                $('.background').each(function(i){
+                    $(this).delay(i*100).animate({'opacity':'1'});
+                });
+            }
+        });
+
+        $('.background').click(function(e){
+            e.stopPropagation();
+            var id = $(this).data('id'),
+                backgrounds = $('#background li'),
+                current = $('#background .show');
+
+            if ($('#background li:eq('+id+')').hasClass('show')){
+                return false;
+            } else {
+                $('#background .show').animate({'opacity':'0'}).removeClass('show');
+                $('#background li:eq('+id+')').addClass('show').animate({'opacity':'1'});
+            }
+        });
+
+        $(document).click(function(){
+            $('#background-switch ul').fadeOut(300);
+        });
+        </script>
+
+    </body>
+</html>

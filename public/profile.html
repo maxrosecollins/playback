@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div id="profile-background"></div>
+
+        <div class="header-container">
+            <header role="top" class="wrapper clearfix">
+                <h2 class="logo">playback.io</h2>
+                <nav id="login">
+                    <ul>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Signup</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+
+        <div class="main-container">
+
+            <div class="main wrapper clearfix">
+                
+                <article class="content-page" id="profile">
+
+                    <header>
+                        <div class="avatar"  style="background: url('images/avatar.jpg')"></div>
+                        <h1>adamsheridan</h1>
+                        <h2>http://playback.io/adamsheridan</h2>
+                        <a href="" class="cta yellow">Edit</a>
+                    </header>
+
+                    <nav role="sub-nav">
+                        <ul class="clearfix">
+                            <li><a href="">Recent Listens</a></li>
+                            <li><a href="">Saved Playlists</a></li>
+                        </ul>
+                    </nav>
+
+                    <section id="recent-listens" class="module">
+                        <h1 class="module-title">Recent Listens</h1>
+                        <ul class="clearfix three-col">
+                            <li class="col">
+                                <a href="">
+                                    <img src="http://i.ytimg.com/vi/1HBoZ279OCc/hqdefault.jpg" class="thumbnail">
+                                    <h1 class="song-title">Mosca - Done Me Wrong (Numbers - NMBRS16)</h1>
+                                    <h2 class="duration">4:25</h2>
+                                </a>
+                            </li>
+                            <li class="col">
+                                <a href="">
+                                    <img src="http://i.ytimg.com/vi/1HBoZ279OCc/hqdefault.jpg" class="thumbnail">
+                                    <h1 class="song-title">Mosca - Done Me Wrong (Numbers - NMBRS16)</h1>
+                                    <h2 class="duration">4:25</h2>
+                                </a>
+                            </li>
+                            <li class="col">
+                                <a href="">
+                                    <img src="http://i.ytimg.com/vi/1HBoZ279OCc/hqdefault.jpg" class="thumbnail">
+                                    <h1 class="song-title">Mosca - Done Me Wrong (Numbers - NMBRS16)</h1>
+                                    <h2 class="duration">4:25</h2>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <a href="" class="more">More Listens</a>
+                    </section>
+
+                    <section id="saved-playlists" class="module">
+                        <h1 class="module-title">Saved Playlists (4)</h1>
+
+                        <ul class="clearfix three-col">
+                            <li class="col">
+                                <a href="">
+                                    <h1 class="title">Chill Bass Music</h1>
+                                    <ul>
+                                        <li>Girl Unit - Club Rez | HD</li>
+                                        <li>Disclosure - Latch ft. Sam Smith</li>
+                                        <li>Mala - Alicia</li>
+                                        <li>The Eyes - Harder (Offical Video)</li>
+                                        <li>Skream - Dutch Flowers</li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="col">
+                                <a href="">
+                                    <h1 class="title">Chill Bass Music</h1>
+                                    <ul>
+                                        <li>Girl Unit - Club Rez | HD</li>
+                                        <li>Disclosure - Latch ft. Sam Smith</li>
+                                        <li>Mala - Alicia</li>
+                                        <li>The Eyes - Harder (Offical Video)</li>
+                                        <li>Skream - Dutch Flowers</li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="col">
+                                <a href="">
+                                    <h1 class="title">Chill Bass Music</h1>
+                                    <ul>
+                                        <li>Girl Unit - Club Rez | HD</li>
+                                        <li>Disclosure - Latch ft. Sam Smith</li>
+                                        <li>Mala - Alicia</li>
+                                        <li>The Eyes - Harder (Offical Video)</li>
+                                        <li>Skream - Dutch Flowers</li>
+                                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                       
+                       <a href="" class="more">More Playlists</a>
+                    </section>
+
+                </article><!-- #profile -->
+
+            </div>  <!-- #main -->
+
+        </div> <!-- #main-container -->
+
+
+        <div id="landing" style="display:none">
+            <h1>LandingView</h1>
+        </div>
+
+        <div id="player" class="clearfix">
+            
+            <div class="controls loading">
+                <a class="playpause ir paused" href="#" title="Play [Track]">Play Track.</a>
+                <a class="prev ir" href="#" data-skip-direction="backwards" title="Previous track.">Previous Track.</a>
+                <a class="next ir" href="#" data-skip-direction="forwards" title="Next track.">Next Track.</a>
+                <a class="track" href="#" title="">-</a>
+                <a class="time" href="#" title="[Track time]">
+                    <span class="current-time">0:00</span> / <span class="length">00:00</span>
+                </a>
+            </div>
+
+            <div class="seek">
+                <div class="progress-bar">
+                    <a class="handle ir" title="Skip to [time]"></a>
+                </div>
+            </div>
+
+            <div class="volume-container">
+                <div class="volume">
+                    <div class="volume-bar">
+                        <div class="volume-level">
+                            <div class="handle ir" title="Skip to [time]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="votes">
+                <a class="up-vote ir" href="#" title="Up Vote [Track]">Up Vote Track</a>
+                <a class="down-vote ir" href="#" title="Down Vote [Track]">Down Vote Track</a>
+            </div>
+
+            <div id="yt_player"></div>
+
+            <audio id="ex_player" src="" controls="controls"></audio>
+
+        </div>
+
+
+        <div id="queue-container">
+
+            <div class="queue-wrap">
+
+                <img src="images/white-label-blank.jpg" id="artwork"/>
+
+                <div class="current-playlist">
+                    <h2><span>Playlist:</span> None</h2>
+                    <div id="track-number">—</div>
+                </div>
+
+                <ul id="queue">
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script id="search-results-template" type="text/x-underscore-template">
+
+                <%
+                    if (results)
+                        var pageStartItem = startAt*8
+                        results = results.slice(pageStartItem, pageStartItem+8);
+                %>
+
+                <% _.each(results, function(result) { %>
+
+                    <li class="search-result" data-source="<%= result.source %>" data-id="<%= result.id %>" data-title="<%= result.title %>" data-owner="<%= result.owner %>" data-duration="<%= result.duration %>" data-thumbnail="<%= result.thumbnail %>">
+
+                        <% if (result.thumbnail !== null) { %>
+                            <img src="<%= result.thumbnail %>" class="thumbnail">
+                        <% } else { %>
+                            <img src="images/preview.png" class="thumbnail not-found" data-title="<%= result.title %>">
+                        <% } %>
+
+                        <h2><%= result.title %></h2>
+                        <h3>by <%= result.owner %></h3>
+                        <a href="<%= result.permalink %>" class="source <%= result.source %>"></a>
+                        <!--<img src="images/icons/social/32x32/YouTube.png" class="source">-->
+                    </li>
+
+                <% }); %>
+
+        </script>
+
+        <script id="queue-entry-template" type="text/x-underscore-template">
+            <li class="queue-entry">
+                <h2 class="track"><%= title %></h2>
+                <h3 class="artist"><%= owner %></h3>
+                <h3 class="time"><%= human_duration %></h3>
+                <img src="<%= thumbnail %>">
+                <ul class="track-options">
+                    <li><span class="track-remove">x</span></li>
+                    <li><span class="track-add">+</span></li>
+                    <li><span class="track-flag">?</span></li>
+                </ul>
+            </li>
+        </script>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/underscore.js"></script>
+        <script src="js/vendor/backbone.js"></script>
+
+        <script src="//w.soundcloud.com/player/api.js"></script>
+        <script src="http://connect.soundcloud.com/sdk.js"></script>
+
+        <!-- Player-specific controllers: These can be concat'd into 1 later -->
+        <script src="js/soundcloud.js"></script>
+        <script src="js/youtube.js"></script>
+        <script src="js/exfm.js"></script>
+        <script src="js/lastfm.js"></script>
+        <script src="js/discogs.js"></script>
+
+        <!-- Main app -->
+        <script src="js/app.js"></script>
+
+        <script>
+          var tag = document.createElement('script');
+          tag.src = "//www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        </script>
+
+        <script>
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-38103869-1']);
+          _gaq.push(['_setDomainName', 'playback.io']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+    </body>
+</html>
